@@ -35,23 +35,24 @@ if (have_posts()) :
                 echo "<span class='search-result-counter {$counterclass}'>{$searchthumb}</span>";
                 ?>
                 <span class='post-meta-infos'>
-                    <time class='date-container minor-meta updated' <?php avia_markup_helper(array('context' => 'entry_time')); ?>>
+
+<!--                     <time class='date-container minor-meta updated' <?php avia_markup_helper(array('context' => 'entry_time')); ?>>
                         <?php the_time('d M Y'); ?>
-                    </time>
+                    </time> -->
                     <?php
-                    if(get_post_type() !== "page")
-                    {
-                        if ( get_comments_number() != "0" || comments_open() )
-                        {
-                            echo "<span class='text-sep'>/</span>";
-                            echo "<span class='comment-container minor-meta'>";
-                            comments_popup_link(  "0 ".__('Comments','avia_framework'),
-                                                  "1 ".__('Comment' ,'avia_framework'),
-                                                  "% ".__('Comments','avia_framework'),'comments-link',
-                                                  "".__('Comments Disabled','avia_framework'));
-                            echo "</span>";
-                        }
-                    }
+                    // if(get_post_type() !== "page")
+                    // {
+                    //     if ( get_comments_number() != "0" || comments_open() )
+                    //     {
+                    //         echo "<span class='text-sep'>/</span>";
+                    //         echo "<span class='comment-container minor-meta'>";
+                    //         comments_popup_link(  "0 ".__('Comments','avia_framework'),
+                    //                               "1 ".__('Comment' ,'avia_framework'),
+                    //                               "% ".__('Comments','avia_framework'),'comments-link',
+                    //                               "".__('Comments Disabled','avia_framework'));
+                    //         echo "</span>";
+                    //     }
+                    // }
 
 
                     $taxonomies  = get_object_taxonomies(get_post_type($the_id));
@@ -70,21 +71,21 @@ if (have_posts()) :
                         }
                     }
 
-                    if(!empty($cats))
-                    {
-                        echo "<span class='text-sep'>/</span>";
-                        echo '<span class="blog-categories minor-meta">'.__('in','avia_framework')." ";
-                        echo $cats;
-                        echo '</span>';
-                    }
+                    // if(!empty($cats))
+                    // {
+                    //     echo "<span class='text-sep'>/</span>";
+                    //     echo '<span class="blog-categories minor-meta">'.__('in','avia_framework')." ";
+                    //     echo $cats;
+                    //     echo '</span>';
+                    // }
 
                     ?>
 
                 </span>
             </header>
-
+                <a class="search-result-title" href="<?php echo  get_permalink($the_id ); ?>"><h4><?php echo get_the_title($the_id ); ?></h4></a>
             <?php
-                echo '<div class="entry-content" '.avia_markup_helper(array('context' => 'entry_content','echo'=>false)).'>';
+                echo '<div class="search-excerpt entry-content" '.avia_markup_helper(array('context' => 'entry_content','echo'=>false)).'>';
                 $excerpt = trim(get_the_excerpt());
                 if(!empty($excerpt))
                 {

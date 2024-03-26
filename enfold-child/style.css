@@ -28,7 +28,12 @@ background-color: white;
 	border-radius: 100px;
 }
 
-
+.search-excerpt p {
+	margin: 0;
+}
+.search-result-title:hover {
+	text-decoration: none;
+}
 /* DC */
 .page-id-133 .image-overlay-inside, .image-overlay.overlay-type-extern {
 	display: none;
