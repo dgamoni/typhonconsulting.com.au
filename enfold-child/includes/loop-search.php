@@ -31,7 +31,7 @@ if (have_posts()) :
                 echo "<span class='search-result-counter {$counterclass}'>{$post_loop_count}</span>";
                 //echo the post title
                 $markup = avia_markup_helper(array('context' => 'entry_title','echo'=>false));
-		$searchthumb = get_the_post_thumbnail( $the_id, 'large' );
+				$searchthumb = get_the_post_thumbnail( $the_id, 'large' );
                 echo "<span class='search-result-counter {$counterclass}'>{$searchthumb}</span>";
                 ?>
                 <span class='post-meta-infos'>
@@ -85,20 +85,20 @@ if (have_posts()) :
             </header>
                 <a class="search-result-title" href="<?php echo  get_permalink($the_id ); ?>"><h4><?php echo get_the_title($the_id ); ?></h4></a>
             <?php
-                echo '<div class="search-excerpt entry-content" '.avia_markup_helper(array('context' => 'entry_content','echo'=>false)).'>';
-                $excerpt = trim(get_the_excerpt());
-                if(!empty($excerpt))
-                {
-                    the_excerpt();
-                }
-                else
-                {
-                    $excerpt = strip_shortcodes( get_the_content() );
-                    $excerpt = apply_filters('the_excerpt', $excerpt);
-                    $excerpt = str_replace(']]>', ']]&gt;', $excerpt);
-                    echo $excerpt;
-                }
-                echo '</div>';
+                // echo '<div class="search-excerpt entry-content" '.avia_markup_helper(array('context' => 'entry_content','echo'=>false)).'>';
+                // $excerpt = trim(get_the_excerpt());
+                // if(!empty($excerpt))
+                // {
+                //     the_excerpt();
+                // }
+                // else
+                // {
+                //     $excerpt = strip_shortcodes( get_the_content() );
+                //     $excerpt = apply_filters('the_excerpt', $excerpt);
+                //     $excerpt = str_replace(']]>', ']]&gt;', $excerpt);
+                //     echo $excerpt;
+                // }
+                // echo '</div>';
             ?>
         </div>
 
