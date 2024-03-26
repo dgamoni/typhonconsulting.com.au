@@ -1,0 +1,42 @@
+/*
+Theme Name: Enfold Child
+Description: A <a href='http://codex.wordpress.org/Child_Themes'>Child Theme</a> for the Enfold Wordpress Theme. If you plan to do a lot of file modifications we recommend to use this Theme instead of the original Theme. Updating wil be much easier then.
+Version: 1.0
+Author: Kriesi
+Author URI: http://www.kriesi.at
+Template: enfold
+*/
+
+
+
+/* From custom css*/
+.main_menu ul:first-child > li > a { font-size: 18px; }
+
+div#header_main {
+background-color: white;
+}
+
+#header_main_alternate { background-color: white; }
+
+.search-result-counter {
+    padding: 0;
+}
+
+.search-result-counter img {
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;
+}
+
+
+/* DC */
+.page-id-133 .image-overlay-inside, .image-overlay.overlay-type-extern {
+	display: none;
+}
+.slide-meta {
+	visibility: hidden;
+}
+.footer_color .avia-content-slider .slide-image {
+	background: none;
+}
+.ajax_search_excerpt {visibility: hidden;}
